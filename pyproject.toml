@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storeguard-cli"
+version = "1.0.0"
+description = "Static store-compliance scanner for Android & iOS projects / 移动应用商店合规静态扫描器"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "gitstq" }]
+keywords = ["android", "ios", "app-store", "google-play", "compliance", "scanner", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+storeguard = "storeguard.cli:main"
+
+[tool.setuptools]
+packages = ["storeguard"]
